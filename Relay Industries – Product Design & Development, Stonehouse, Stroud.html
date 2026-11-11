@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Relay Industries – Product Design &amp; Development, Stonehouse, Stroud</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600&family=IBM+Plex+Mono:wght@400&display=swap">
+<style>
+:root{--bg:#fff;--ink:#000;--muted:#8a8a8a;--line:#e3e3e3;--tile:#f0f0f0;--accent:#ff5a00;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0c0c0c;--ink:#f2f2f2;--muted:#8d8d8d;--line:#2a2a2a;--tile:#1a1a1a;--accent:#ff6a1a}}
+:root[data-theme="dark"]{--bg:#0c0c0c;--ink:#f2f2f2;--muted:#8d8d8d;--line:#2a2a2a;--tile:#1a1a1a;--accent:#ff6a1a}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 .9375rem/1.55 "Inter Tight",Helvetica,Arial,sans-serif;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+header{display:flex;flex-wrap:wrap;gap:.5rem 2rem;align-items:baseline;justify-content:space-between;padding:1rem clamp(1rem,3vw,2rem);font-size:.875rem}
+.brand{font-weight:600;text-decoration:none;text-transform:lowercase}
+.brand::before{content:"";display:inline-block;width:.6em;height:.6em;border-radius:50%;background:var(--accent);margin-right:.5rem}
+nav{display:flex;flex-wrap:wrap;gap:.25rem 1.25rem;text-transform:lowercase}
+nav a{text-decoration:none}
+nav a:hover,nav a[aria-current="page"]{color:var(--accent)}
+main{padding:0 clamp(1rem,3vw,2rem) 5rem}
+h1{font-weight:500;font-size:clamp(1.4rem,2.6vw,2rem);line-height:1.2;letter-spacing:-.02em;margin:5rem 0 4rem;max-width:34ch}
+h2,h3{font-weight:500;font-size:1rem;line-height:1.3;margin:0 0 .5rem;text-transform:lowercase}
+h2.sec{margin:5rem 0 1.5rem}
+p{max-width:64ch;margin:0 0 1rem}
+.mono,cite{font:400 .75rem/1.5 "IBM Plex Mono",Menlo,monospace;color:var(--muted);font-style:normal}
+.cap{color:var(--muted);font-size:.875rem}
+.tiles{display:grid;gap:1.5rem 1rem;grid-template-columns:repeat(auto-fill,minmax(min(100%,16rem),1fr));margin:0 0 3rem}
+.ph{background:var(--tile);aspect-ratio:1;display:flex;align-items:flex-end;padding:.75rem;font:400 .7rem/1.4 "IBM Plex Mono",Menlo,monospace;color:var(--muted);margin-bottom:.75rem}
+.ph.wide{aspect-ratio:4/3}
+.ph.port{aspect-ratio:4/5}
+.rows>div{display:grid;gap:.5rem 2rem;grid-template-columns:minmax(0,1fr);border-top:1px solid var(--line);padding:1.25rem 0}
+@media(min-width:48rem){.rows>div{grid-template-columns:minmax(10rem,1fr) 3fr}}
+.person{display:grid;gap:1.5rem 2rem;grid-template-columns:minmax(0,1fr);border-top:1px solid var(--line);padding:1.25rem 0 3rem}
+@media(min-width:48rem){.person{grid-template-columns:minmax(10rem,1fr) 3fr}.person>div:last-child{columns:2 22rem;column-gap:2rem}.person p{break-inside:avoid-column}}
+blockquote{margin:0 0 .75rem;font-size:clamp(1.2rem,2.2vw,1.6rem);line-height:1.35;letter-spacing:-.01em;max-width:44ch}
+.quote{border-top:1px solid var(--line);padding:1.5rem 0 3rem}
+.btn{display:inline-block;background:var(--ink);color:var(--bg);padding:.6rem 1rem;text-decoration:none;text-transform:lowercase;font-weight:500}
+.btn:hover{background:var(--accent);color:#fff}
+.btn-wrap{margin-top:3rem}
+footer{display:flex;flex-wrap:wrap;gap:.5rem 2rem;justify-content:space-between;padding:1rem clamp(1rem,3vw,2rem);border-top:1px solid var(--line);font-size:.8125rem;color:var(--muted)}
+footer a{text-decoration:none;margin-right:1rem}
+footer a:hover{color:var(--accent)}
+.theme{background:none;border:0;color:inherit;font:inherit;cursor:pointer;padding:0;text-transform:lowercase}
+.theme:hover{color:var(--accent)}
+</style>
+</head>
+<body>
+<header>
+  <a class="brand" href="#home" id="brand"></a>
+  <nav id="nav" aria-label="Main"></nav>
+</header>
+<main id="main" tabindex="-1"></main>
+<footer id="footer"></footer>
+
+<!--
+  EDIT HERE. Everything the site says lives in this one JSON block.
+  Change the text between the quotes, save, and reload. Don't remove the quotes, commas or brackets.
+  Page body types: "text", "image" (placeholder box), "services", "people", "quotes", "cases", "contact", "button".
+  Images: put a file path in "src" (e.g. "img/calipers.jpg"). With no "src" a labelled placeholder shows.
+-->
+<script type="application/json" id="site-content">
+{
+  "company": "Relay Industries",
+  "legalName": "Relay Industries Limited",
+  "phone": "01453 377034",
+  "address": ["First Floor, Unit 5", "Stonehouse Commercial Centre", "Stonehouse, GL10 3RD", "United Kingdom"],
+  "visitors": "Visitors by appointment only",
+  "social": [
+    {"label": "LinkedIn", "url": "https://www.linkedin.com/company/relay-industries/"},
+    {"label": "Instagram", "url": "https://www.instagram.com/relay.industries/?hl=en"}
+  ],
+  "nav": [
+    {"id": "home", "label": "Home"},
+    {"id": "productdesign", "label": "Product Design"},
+    {"id": "theteam", "label": "The Team"},
+    {"id": "work", "label": "Featured Work"},
+    {"id": "partnerships", "label": "Partnerships"},
+    {"id": "contact", "label": "Contact"}
+  ],
+  "pages": {
+    "home": {
+      "title": "Relay Industries Product Design & Development | Stonehouse | Stroud | Gloucestershire",
+      "heading": "We help innovators and businesses turn ideas into market-ready products through Product Design, Engineering & Manufacturing Support",
+      "body": [
+        {"type": "services", "items": [
+          {"title": "Trusted Partner", "text": "We pride ourselves on being the trusted partner for businesses and innovators, designing adaptable and efficient products tailored to meet the unique needs of each project. With decades of experience in mechanical engineering and product design, we specialise in providing comprehensive, end-to-end development support.", "image": {"alt": "Research and development: accurate measuring using calipers"}},
+          {"title": "Product Development", "text": "Our resourceful team excels in tackling complex challenges, combining creativity with technical precision to deliver results that exceed expectations. We evaluate the technical and economic viability of each concept. Our process is adaptable and we can anticipate potential hurdles throughout the development process.", "image": {"alt": "Two people working at a wooden table with design sketches and colour swatches"}},
+          {"title": "Commitment to Excellence", "text": "We combine our expertise with a commitment to excellence, making us the go-to partner for businesses bringing cutting-edge products to life. Whether it's mechanical engineering or product refinement, we provide the support and guidance necessary for success.", "image": {"alt": "Person using a 3D printer"}}
+        ]},
+        {"type": "button", "label": "Featured Work", "to": "work"}
+      ]
+    },
+    "productdesign": {
+      "title": "Product Design Consultancy | Innovate with Us",
+      "heading": "Bridging the gap between groundbreaking research and real-world manufacturing",
+      "body": [
+        {"type": "image", "alt": "Blood pump product design"},
+        {"type": "heading", "text": "What we do for you…"},
+        {"type": "services", "items": [
+          {"title": "Concept Generation", "text": "We collaborate closely with our clients to truly understand their vision, combining our expertise in engineering and design to develop breakthrough concepts that are both practical and innovative. We guide you through the early stages of product development—delivering unique, manufacturable concepts ready to take to the next level."},
+          {"title": "Detailed Design", "text": "Once the concepts have been created and developed we turn the idea into something real. This involves detailed engineering, developing how the product will be manufactured, tested and assembled. This takes a number of stages; first prototype, production candidate, final design. Prototypes are made along the way and regular reviews held to ensure we're meeting your expectations."},
+          {"title": "Prototyping", "text": "We are proud of our in-house prototyping capabilities which allow us to quickly transform concepts into tangible products. We can produce high-quality same-day prototypes that enable real-world testing, refinement, and validation. From early-stage mock-ups to fully functional models, we offer precision and efficiency at every step, accelerating the development process and allowing us to refine designs and resolve potential challenges before moving into full-scale production. We also work with a handful of excellent suppliers to produce what we cannot do ourselves."},
+          {"title": "Project Management", "text": "Through years of hands-on experience, our project management skills ensure the smooth execution of every design project. By staying agile, adaptable, proactive, and detail-oriented, we work closely with you to meet your goals, ensuring projects are delivered efficiently and effectively from concept to completion."},
+          {"title": "Manufacturing", "text": "We understand that successful product design is only as strong as its manufacturability. Our knowledge of materials, production techniques, and supply chains allows us to create designs that are not only cutting-edge but also practical and cost-effective to manufacture. We can source custom components, including complex and intricate parts (eg. optically bonded LCDs), injection moulds, PCBs, packaging and full assembly."},
+          {"title": "Electronics & Software", "text": "At Relay Industries, we offer comprehensive electronics and software design as part of our product development services. From PCB design and firmware development to embedded software and system integration, we collaborate with expert partners to deliver cutting-edge electronic solutions that seamlessly complement our mechanical and industrial designs. Whether you're developing a smart device, IoT system, or complex electromechanical product, we ensure innovation, reliability, and manufacturability at every stage."}
+        ]},
+        {"type": "text", "text": "The products we develop together aren't just state-of-the-art, they're the future. By staying ahead of the curve, your business can anticipate market trends, meet emerging consumer demands, and position itself as a leader in innovation."},
+        {"type": "button", "label": "Get in touch", "to": "contact"}
+      ]
+    },
+    "theteam": {
+      "title": "The Team | Meet Our Experts",
+      "heading": "Passion and enthusiasm drive us to form personal connections with every project",
+      "body": [
+        {"type": "people", "items": [
+          {"name": "Jono Taylor", "image": {"alt": "Jono Taylor"}, "paras": [
+            "As the founder of Relay Industries, I bring my expertise in medical, industrial, and consumer markets to life through innovative and efficient solutions. With a background as an engineer, my career has been dedicated to invention, research, and development, spanning a variety of cutting-edge R&D projects.",
+            "My journey began early, growing up in a family of engineers. I mastered computer programming before I was ten and learned 3D CAD in my teens. My professional milestones include working at Dyson, where I contributed to breakthrough technology and patented innovations, as well as developing internal tools that optimized engineers' workflows.",
+            "At Spectrum Medical, I led a team in designing top-tier cardiac surgery products, including perfusion equipment, cardiac pumps, and patient heater-coolers. Now, as an independent consultant, I collaborate across multiple sectors, combining technical precision with a personable approach to bring robust product concepts to life.",
+            "Outside of work, I enjoy time with my family—my wife and our three boys—alongside hobbies like baking, brewing ale, motorcycling, and competing in triathlons. I'm passionate about giving back, raising thousands for charities focused on Meningitis and men's health."]},
+          {"name": "Richard Chapman", "image": {"alt": "Richard Chapman"}, "paras": [
+            "With over 10 years in the design industry, I'm passionate about crafting human-centred designs that improve everyday experiences.",
+            "Since graduating with first-class honours in Product Design from NTU in 2013, I spent the first several years of my career working in a design consultancy environment. During this time, I worked on projects across sectors such as nursery, kitchenware and beauty, with several of my projects receiving industry awards. I also had the opportunity to collaborate with international clients from the USA, China, and Europe.",
+            "The next chapter of my career was at Dyson, where I worked as a design engineer in new product innovation, contributing to the development of new patented technologies in the audio space.",
+            "I am dedicated to creating meaningful and user-focused designs and thrive on solving complex design challenges. Outside of work, I balance my creativity with a love of sports and music."]},
+          {"name": "Louise Jensen", "image": {"alt": "Louise Jensen"}, "paras": [
+            "As a Business Consultant and Coach, my work allows me to focus on my passion—helping others achieve success. With over 25 years of diverse experience in property management, talent acquisition, and learning & development (L&D), I offer expertise in business consultancy, operational strategy, and professional development.",
+            "Throughout my career, I've embraced continuous learning and growth, evolving into a versatile and empathetic consultant. I thrive on making a tangible difference, whether it's guiding business owners to execute their vision or crafting strategies that drive lasting success.",
+            "I'm thrilled to be part of the Relay team, where the journey toward operational excellence and strategic growth is both exciting and rewarding. I'm deeply committed to seeing the business flourish and am dedicated to contributing to its successful trajectory, ensuring that we achieve and surpass our goals.",
+            "Outside of work, you'll often find me stomping the Cotswold hills, swimming in a lake, snowboarding in Norway, or enjoying time with my partner, 3 children and baby granddaughter."]}
+        ]},
+        {"type": "button", "label": "Get in touch", "to": "contact"}
+      ]
+    },
+    "work": {
+      "title": "Featured Work | Explore Our Innovations",
+      "heading": "Featured Work",
+      "body": [
+        {"type": "text", "text": "Our deep experience and agile, collaborative approach allow us to adapt to each sector's unique demands, helping our clients bring meaningful products to market faster and smarter.", "lede": true},
+        {"type": "services", "items": [
+          {"title": "Medical & Healthcare", "text": "We've worked alongside leading medtech innovators to design and engineer products that improve lives and streamline healthcare delivery. From inhaler automation devices to connected diagnostic equipment and home health monitoring systems, our team understands the precision, compliance, and human factors that underpin successful medical products."},
+          {"title": "Consumer & Connected Devices", "text": "We've partnered with household names and startups alike to create beautifully functional consumer products — blending design, usability, and technology. Our work spans connected devices, smart home technology, and everyday products designed for real-world impact."},
+          {"title": "Industrial, Scientific & Engineering", "text": "Relay's engineering depth extends into industrial and scientific applications, where performance, reliability, and manufacturability are key. We collaborate with clients developing advanced technologies for sensing, energy, and measurement."},
+          {"title": "FMCG, Packaging & Manufacturing", "text": "Our experience in fast-moving consumer goods (FMCG) and packaging innovation gives us a strong understanding of cost, speed, and production scalability. We design with manufacturing in mind, using our network of trusted suppliers to take products from early sketch to tooling and mass production."}
+        ]},
+        {"type": "heading", "text": "Case studies"},
+        {"type": "cases", "items": [
+          {"title": "Albus Health", "summary": "Contactless Remote Monitoring Solutions for Clinical Trials", "author": "Jono Taylor", "date": "06/02/2026", "url": "https://www.relayindustries.com/work/albushealth"},
+          {"title": "i.D.O. Deodorant", "summary": "i.D.O. Deodorant", "author": "Jono Taylor", "date": "14/08/2025", "url": "https://www.relayindustries.com/work/draft"},
+          {"title": "Raspberry Pi", "summary": "USB 3 Hub", "author": "Richard Chapman", "date": "02/05/2025", "url": "https://www.relayindustries.com/work/raspberrypi"},
+          {"title": "RockStar DL01", "summary": "Automating the waste shot firing process in MDI testing", "author": "Jono Taylor", "date": "01/05/2025", "url": "https://www.relayindustries.com/work/rockstardl01"}
+        ]},
+        {"type": "button", "label": "Get in touch", "to": "contact"}
+      ]
+    },
+    "partnerships": {
+      "title": "Partnerships | Forge Strong Alliances",
+      "heading": "We believe that true partnerships are forged through shared challenges, mutual respect, and aligned values.",
+      "body": [
+        {"type": "quotes", "items": [
+          {"text": "Jono and the team at Relay Industries have been an incredible innovation partner for us on Tetra Pak challenges for years—smart, creative, fast, and flexible. They tackle complex problems, build quick prototypes, and feel like a true extension of our team. Highly recommended.", "who": "James Eelbeck, Co-Founder & Director of Innovation – Industry of Us"},
+          {"text": "One of the most valuable aspects of working with Relay, is their ability to swiftly understand a customer's requirements. From expert mechanical engineering and rendering, to innovative design work, Relay consistently produce impressive results.", "who": "Nick Davey, CEO – TATTU Design"}
+        ]},
+        {"type": "button", "label": "Get in touch", "to": "contact"}
+      ]
+    },
+    "contact": {
+      "title": "Contact | Get in Touch Now",
+      "heading": "Let's chat",
+      "body": [{"type": "contact"}]
+    }
+  }
+}
+</script>
+
+<script>
+(function(){
+  var S = JSON.parse(document.getElementById('site-content').textContent);
+  var main = document.getElementById('main');
+  var esc = function(s){return String(s==null?'':s).replace(/[&<>"]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]})};
+  var tick = function(s){return String(s).replace(/'/g,'\u2019')};
+  var img = function(im,cls){
+    if(!im) return '';
+    if(im.src) return '<img src="'+esc(im.src)+'" alt="'+esc(im.alt)+'" style="max-width:100%;height:auto;display:block;margin-bottom:.75rem">';
+    return '<div class="ph '+(cls||'')+'" role="img" aria-label="'+esc(im.alt)+'">'+esc(im.alt)+'</div>';
+  };
+  var links = function(){return S.social.map(function(s){return '<a href="'+esc(s.url)+'">'+esc(s.label.toLowerCase())+'</a>'}).join('')};
+
+  var block = {
+    text: function(b){return '<p'+(b.lede?' class="cap" style="font-size:1rem;color:inherit"':'')+'>'+esc(tick(b.text))+'</p>'},
+    heading: function(b){return '<h2 class="sec">'+esc(b.text)+'</h2>'},
+    image: function(b){return '<div style="margin:0 0 3rem">'+img(b,'wide')+'</div>'},
+    button: function(b){return '<div class="btn-wrap"><a class="btn" href="#'+b.to+'">'+esc(b.label)+'</a></div>'},
+    services: function(b){
+      if(b.items[0] && b.items[0].image){
+        return '<div class="tiles">'+b.items.map(function(i){
+          return '<article>'+img(i.image)+'<h3>'+esc(i.title)+'</h3><p class="cap">'+esc(tick(i.text))+'</p></article>';
+        }).join('')+'</div>';
+      }
+      return '<div class="rows">'+b.items.map(function(i){
+        return '<div><h3>'+esc(i.title)+'</h3><p>'+esc(tick(i.text))+'</p></div>';
+      }).join('')+'</div>';
+    },
+    people: function(b){
+      return b.items.map(function(p){
+        return '<section class="person"><div>'+img(p.image,'port')+'<h2>'+esc(p.name)+'</h2></div><div>'+p.paras.map(function(t){return '<p>'+esc(tick(t))+'</p>'}).join('')+'</div></section>';
+      }).join('');
+    },
+    quotes: function(b){
+      return b.items.map(function(q){
+        return '<figure class="quote" style="margin:0"><blockquote>\u201C'+esc(tick(q.text))+'\u201D</blockquote><cite>'+esc(q.who)+'</cite></figure>';
+      }).join('');
+    },
+    cases: function(b){
+      return '<div class="tiles">'+b.items.map(function(c){
+        return '<article>'+img({alt:c.title},'wide')+'<h3><a href="'+esc(c.url)+'">'+esc(c.title)+'</a></h3><p class="cap" style="margin-bottom:.25rem">'+esc(c.summary)+'</p><span class="mono">'+esc(c.author)+' / '+esc(c.date)+'</span></article>';
+      }).join('')+'</div>';
+    },
+    contact: function(){
+      var tel = S.phone.replace(/\s/g,'').replace(/^0/,'+44');
+      return '<div class="rows"><div><h3>'+esc(S.legalName)+'</h3><p><a href="tel:'+esc(tel)+'">'+esc(S.phone)+'</a></p></div>'
+        +'<div><h3>address</h3><p>'+S.address.map(esc).join('<br>')+'</p><p class="mono">'+esc(S.visitors.toLowerCase())+'</p></div>'
+        +'<div><h3>follow</h3><p>'+links()+'</p></div>'
+        +'<div><h3>map</h3><div class="ph wide" role="img" aria-label="Map placeholder">paste your google maps iframe here</div></div></div>';
+    }
+  };
+
+  document.getElementById('brand').textContent = S.company;
+  var nav = document.getElementById('nav');
+  nav.innerHTML = S.nav.map(function(n){return '<a href="#'+n.id+'" data-id="'+n.id+'">'+esc(n.label)+'</a>'}).join('');
+  document.getElementById('footer').innerHTML = '<span>\u00A9 2026 '+esc(S.company.toLowerCase())+'</span><span>'+links()+'<button class="theme" id="theme" type="button">light / dark</button></span>';
+  document.getElementById('theme').addEventListener('click',function(){
+    var r=document.documentElement,dark=getComputedStyle(r).getPropertyValue('--bg').trim()==='#0c0c0c';
+    r.setAttribute('data-theme',dark?'light':'dark');
+  });
+
+  function render(){
+    var id = (location.hash||'#home').slice(1);
+    if(!S.pages[id]) id='home';
+    var p = S.pages[id];
+    document.title = p.title;
+    nav.querySelectorAll('a').forEach(function(a){
+      if(a.dataset.id===id) a.setAttribute('aria-current','page'); else a.removeAttribute('aria-current');
+    });
+    main.innerHTML = '<h1>'+esc(tick(p.heading))+'</h1>'+p.body.map(function(b){return block[b.type](b)}).join('');
+    window.scrollTo(0,0);
+  }
+  window.addEventListener('hashchange',render);
+  render();
+})();
+</script>
+</body>
+</html>
